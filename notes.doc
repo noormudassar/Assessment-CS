@@ -21,3 +21,10 @@ append 566.975 μs
 Results for the extraLargeArray
 insert 822.253925 ms
 append 5.904535 ms
+
+
+When comparing the two functions, append and insert, we can see that the time it takes to run the individual functions varys across the different array sizes. In order to compare the two, we have to see how the times change based upon how the array size changes. 
+
+As an example, for the insert operation the times increase overall when the array size increases but the rate of increase is not consistent. For example, in the case of the extraLargeArray, the insert time increases from 818.421955 ms to 822.253925 ms, which is a small increase considering the array size. This suggests linear scaling for the insert operation. For the append operation the times also increase with array size, but there seems to be a more consistent and linear-like increase. In the case of the extraLargeArray, the append time increases significantly from 35.582799 ms to 5.904535 ms.
+
+Overall, when comparing the two functions, the append operation scales better than the insert operation. This is because the append operation demonstrates more consistent and linear-like scaling behavior across different array sizes.
